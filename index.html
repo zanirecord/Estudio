@@ -81,7 +81,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #000; /* Coincide con el fondo del footer */
+            background: transparent; /* Fondo transparente para que se vea el video */
             overflow: hidden;
             clip-path: inset(50% 50% 50% 50%);
         }
@@ -271,8 +271,12 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contacto" class="bg-black py-16 px-6 md:px-8 border-t border-white/10">
-        <div class="container mx-auto text-center text-gray-500">
+    <footer id="contacto" class="relative bg-black py-16 px-6 md:py-20 border-t border-white/10 overflow-hidden">
+        <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover z-0">
+             <source src="https://raw.githubusercontent.com/zanirecord/Estudio/main/video3.mp4" type="video/mp4">
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
+        <div class="relative z-20 container mx-auto text-center text-gray-400">
             <h2 class="text-3xl font-black text-white mb-4">Zani Record</h2>
             <p class="mb-8">Ramos Mejia, Buenos Aires, Argentina</p>
             <div class="flex justify-center space-x-6 mb-8">
